@@ -4,14 +4,29 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const root = ReactDOM.createRoot(document.getElementById('root'));
+// inside the render function always have a parent div to wrap other components inside
+// MyComponent and MySecondComponent is a jsx element
+root.render(<div>
+  <MyComponent></MyComponent> 
+  <MySecondComponent></MySecondComponent>
+</div>); // its like root.innerHTML
+
+
+// jsx -> combination of js and HTML -> 
+// JSX is when you return html code through js functions
+// returning html through a jsx function is called jsx
+
+function MyComponent() { // components are pascal case
+  return (
+    <div>
+      <h1>Hi, Krishna!</h1>
+    </div>
+  )
+}
+function MySecondComponent(){
+  return (
+    <h3>Hello, world!</h3>
+  )
+}
