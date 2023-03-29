@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+// the components are coming from App
 import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // inside the render function always have a parent div to wrap other components inside
 // MyComponent and MySecondComponent is a jsx element
-root.render(<div>
-  <MyComponent></MyComponent> 
-  <MySecondComponent></MySecondComponent>
-</div>); // its like root.innerHTML
+root.render(<App />); // its like root.innerHTML
 
 
 // jsx -> combination of js and HTML -> 
